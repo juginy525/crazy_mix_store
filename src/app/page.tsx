@@ -19,14 +19,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 text-neutral-900 font-sans pb-12">
+    <div className="min-h-screen bg-[#F9F8F4] text-[#33312E] font-sans pb-12">
       {/* Header / Logo Area */}
-      <header className="pt-8 pb-6 px-4 flex flex-col items-center justify-center bg-white shadow-sm rounded-b-[2rem] mb-6">
-        <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-4">
+      <header className="pt-10 pb-4 px-4 flex flex-col items-center justify-center mb-6">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-6">
           <Image src="/logo.jpg" alt="이상한음료가게 로고" fill className="object-contain" priority />
         </div>
-        <div className="bg-yellow-100 text-yellow-900 px-4 py-2 rounded-full font-bold text-sm sm:text-base shadow-sm flex items-center gap-2">
-          <span>💖</span> 이상한음료가게 수익금은 전액 기부 됩니다 <span>💖</span>
+        <div className="bg-white border border-[#E8E6DF] text-[#5C574F] px-5 py-2.5 rounded-full font-bold text-sm sm:text-base shadow-sm flex items-center gap-2">
+          <span className="text-red-400">💖</span> 이상한음료가게 수익금은 전액 기부 됩니다 <span className="text-red-400">💖</span>
         </div>
       </header>
 
@@ -37,15 +37,15 @@ export default function Home() {
             <div
               key={menu.id}
               onClick={() => setSelectedImage(`/menu${menu.id}.jpg`)}
-              className="bg-white rounded-2xl p-3 sm:p-4 flex flex-row items-center shadow-sm hover:shadow-md transition-all active:scale-[0.98] cursor-pointer"
+              className="bg-white rounded-3xl p-3 sm:p-4 flex flex-row items-center shadow-sm border border-[#E8E6DF] hover:shadow-md transition-all active:scale-[0.98] cursor-pointer"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-neutral-200 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden relative">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 bg-[#F0EFEB] rounded-2xl flex-shrink-0 flex items-center justify-center overflow-hidden relative">
                 <Image src={`/menu${menu.id}.jpg`} alt={menu.name} fill className="object-cover" />
               </div>
               <div className="ml-4 flex flex-col justify-center flex-grow">
-                <h2 className="text-xl sm:text-2xl font-bold text-black mb-1">{menu.name}</h2>
-                <p className="text-xs sm:text-sm text-neutral-500 mb-2 line-clamp-2 leading-relaxed">{menu.description}</p>
-                <div className="text-base sm:text-lg font-extrabold text-neutral-800">{menu.price}</div>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#33312E] mb-1">{menu.name}</h2>
+                <p className="text-xs sm:text-sm text-[#7A7469] mb-2 line-clamp-2 leading-relaxed">{menu.description}</p>
+                <div className="text-base sm:text-lg font-extrabold text-[#33312E]">{menu.price}</div>
               </div>
             </div>
           ))}
@@ -54,26 +54,26 @@ export default function Home() {
 
       {/* Payment Footer */}
       <footer className="mt-10 max-w-2xl mx-auto px-4">
-        <div className="bg-black text-white rounded-3xl p-6 text-center shadow-xl">
+        <div className="bg-[#3E3A34] text-[#F9F8F4] rounded-[2rem] p-6 text-center shadow-lg">
           <h3 className="text-lg sm:text-xl font-bold mb-3">💳 결제 안내</h3>
-          <p className="mb-4 text-sm sm:text-base font-medium text-neutral-300">계좌이체 또는 현금결제만 가능합니다.</p>
-          <div className="bg-neutral-800 rounded-2xl p-4 mt-2 inline-block text-left w-full sm:w-auto">
-            <p className="text-neutral-400 text-xs sm:text-sm mb-2">계좌번호 (예금주: 주진휘)</p>
-            <div className="flex items-center justify-between gap-4 bg-neutral-900 p-3 rounded-xl border border-neutral-700">
-              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-white">
+          <p className="mb-4 text-sm sm:text-base font-medium text-[#D1CDC7]">계좌이체 또는 현금결제만 가능합니다.</p>
+          <div className="bg-[#4D4942] rounded-2xl p-4 mt-2 inline-block text-left w-full sm:w-auto shadow-inner">
+            <p className="text-[#A39D93] text-xs sm:text-sm mb-2">계좌번호 (예금주: 주진휘)</p>
+            <div className="flex items-center justify-between gap-4 bg-[#2A2723] p-3 rounded-xl border border-[#3E3A34]">
+              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-[#F9F8F4]">
                 카카오뱅크 3333116617661
-                <span className="text-neutral-400 text-sm font-sans tracking-normal ml-2 sm:ml-3">5,000원</span>
+                <span className="text-[#A39D93] text-sm font-sans tracking-normal ml-2 sm:ml-3">5,000원</span>
               </p>
               <button 
                 onClick={handleCopy}
-                className="bg-white text-black px-4 py-2 rounded-lg text-xs font-bold hover:bg-neutral-200 active:bg-neutral-300 transition-colors shrink-0 shadow-sm"
+                className="bg-[#F9F8F4] text-[#3E3A34] px-4 py-2 rounded-lg text-xs font-bold hover:bg-white active:scale-95 transition-all shrink-0 shadow-sm"
               >
                 복사
               </button>
             </div>
           </div>
         </div>
-        <p className="text-center text-neutral-400 text-xs mt-6">
+        <p className="text-center text-[#A39D93] text-xs mt-6">
           © 2026 더함공동체 청년부 이상한음료가게
         </p>
       </footer>
