@@ -21,9 +21,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-100 text-neutral-900 font-sans pb-12">
       {/* Header / Logo Area */}
-      <header className="pt-8 pb-4 px-4 flex flex-col items-center justify-center bg-white shadow-sm rounded-b-[2rem] mb-6">
-        <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+      <header className="pt-8 pb-6 px-4 flex flex-col items-center justify-center bg-white shadow-sm rounded-b-[2rem] mb-6">
+        <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-4">
           <Image src="/logo.jpg" alt="이상한음료가게 로고" fill className="object-contain" priority />
+        </div>
+        <div className="bg-yellow-100 text-yellow-900 px-4 py-2 rounded-full font-bold text-sm sm:text-base shadow-sm flex items-center gap-2">
+          <span>💖</span> 이상한음료가게 수익금은 전액 기부 됩니다 <span>💖</span>
         </div>
       </header>
 
