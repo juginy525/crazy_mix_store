@@ -14,7 +14,7 @@ export default function Home() {
   ];
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('123456-78-901234');
+    navigator.clipboard.writeText('카카오뱅크 3333116617661 주진휘 5000원');
     alert('계좌번호가 복사되었습니다!');
   };
 
@@ -55,9 +55,9 @@ export default function Home() {
           <h3 className="text-lg sm:text-xl font-bold mb-3">💳 결제 안내</h3>
           <p className="mb-4 text-sm sm:text-base font-medium text-neutral-300">계좌이체 또는 현금결제만 가능합니다.</p>
           <div className="bg-neutral-800 rounded-2xl p-4 mt-2 inline-block text-left w-full sm:w-auto">
-            <p className="text-neutral-400 text-xs sm:text-sm mb-2">계좌번호 (예금주: 홍길동)</p>
+            <p className="text-neutral-400 text-xs sm:text-sm mb-2">계좌번호 (예금주: 주진휘)</p>
             <div className="flex items-center justify-between gap-4 bg-neutral-900 p-3 rounded-xl border border-neutral-700">
-              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-white">국민 123456-78-901234</p>
+              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-white">카카오뱅크 3333116617661</p>
               <button 
                 onClick={handleCopy}
                 className="bg-white text-black px-4 py-2 rounded-lg text-xs font-bold hover:bg-neutral-200 active:bg-neutral-300 transition-colors shrink-0 shadow-sm"
