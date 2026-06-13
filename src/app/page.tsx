@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function Home() {
   const menus = [
-    { id: 1, name: '메뉴 1', description: '준비 중...', price: '₩0' },
-    { id: 2, name: '메뉴 2', description: '준비 중...', price: '₩0' },
-    { id: 3, name: '메뉴 3', description: '준비 중...', price: '₩0' },
-    { id: 4, name: '메뉴 4', description: '준비 중...', price: '₩0' },
+    { id: 1, name: '초바단', description: '바나나맛 우유와 초코우유의 달콤한 만남 🍌🍫', price: '5,000원' },
+    { id: 2, name: '솔솔청청', description: '솔의 눈과 청포도 에이드의 상쾌한 조화 🌲🍇', price: '5,000원' },
+    { id: 3, name: '메뉴 3', description: '메뉴 준비 중...', price: '₩0' },
+    { id: 4, name: '메뉴 4', description: '메뉴 준비 중...', price: '₩0' },
   ];
 
   return (
@@ -30,9 +30,11 @@ export default function Home() {
               className="bg-white rounded-3xl p-4 flex flex-row items-center shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-black"
             >
               <div className="w-28 h-28 bg-neutral-200 rounded-2xl flex-shrink-0 flex items-center justify-center border border-dashed border-neutral-400 overflow-hidden relative">
-                <span className="text-neutral-400 text-xs font-semibold">메뉴 이미지 {menu.id}</span>
-                {/* TODO: 여기에 실제 메뉴 이미지 교체 */}
-                {/* <Image src={`/menu${menu.id}.jpg`} alt={menu.name} fill className="object-cover" /> */}
+                {menu.id <= 2 ? (
+                  <Image src={`/menu${menu.id}.jpg`} alt={menu.name} fill className="object-cover" />
+                ) : (
+                  <span className="text-neutral-400 text-xs font-semibold">메뉴 이미지 {menu.id}</span>
+                )}
               </div>
               <div className="ml-5 flex flex-col justify-center flex-grow">
                 <h2 className="text-2xl font-bold text-black mb-1">{menu.name}</h2>
