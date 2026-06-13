@@ -57,7 +57,10 @@ export default function Home() {
           <div className="bg-neutral-800 rounded-2xl p-4 mt-2 inline-block text-left w-full sm:w-auto">
             <p className="text-neutral-400 text-xs sm:text-sm mb-2">계좌번호 (예금주: 주진휘)</p>
             <div className="flex items-center justify-between gap-4 bg-neutral-900 p-3 rounded-xl border border-neutral-700">
-              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-white">카카오뱅크 3333116617661</p>
+              <p className="text-base sm:text-lg font-mono font-bold tracking-wider text-white">
+                카카오뱅크 3333116617661
+                <span className="text-neutral-400 text-sm font-sans tracking-normal ml-2 sm:ml-3">5,000원</span>
+              </p>
               <button 
                 onClick={handleCopy}
                 className="bg-white text-black px-4 py-2 rounded-lg text-xs font-bold hover:bg-neutral-200 active:bg-neutral-300 transition-colors shrink-0 shadow-sm"
